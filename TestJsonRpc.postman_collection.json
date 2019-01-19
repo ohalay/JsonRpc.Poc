@@ -1,0 +1,99 @@
+{
+	"info": {
+		"_postman_id": "7910fd82-3351-4a9d-b1c5-99a5fc6bd7d1",
+		"name": "TestJsonRpc",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "CreateModel",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": " {\n \t\"jsonrpc\": \"2.0\", \n \t\"id\": 1, \n \t\"method\": \"CreateModel\", \n \t\"params\": {\n \t\t\"model\": {\n \t\t\t\"id\": 22,\n \t\t\t\"name\": \"some_name\"\t\n \t\t}\n \t}\n }"
+				},
+				"url": {
+					"raw": "https://localhost:44382/api",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44382",
+					"path": [
+						"api"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateAnotherModel",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": " {\n \t\"jsonrpc\": \"2.0\", \n \t\"id\": 2, \n \t\"method\": \"CreateAnotherModel\", \n \t\"params\": {\n \t\t\"id\": 23,\n \t\t\"name\": \"some_another_name\"\t\n \t}\n }"
+				},
+				"url": {
+					"raw": "https://localhost:44382/api",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44382",
+					"path": [
+						"api"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "BulkCreate",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": " [\n  {\n \t\"jsonrpc\": \"2.0\", \n \t\"id\": 1, \n \t\"method\": \"CreateModel\", \n \t\"params\": {\n \t\t\"model\": {\n \t\t\t\"id\": 22,\n \t\t\t\"name\": \"some_name\"\t\n \t\t}\n \t}\n  },\n  {\n \t\"jsonrpc\": \"2.0\", \n \t\"id\": 2, \n \t\"method\": \"CreateAnotherModel\", \n \t\"params\": {\n \t\t\"id\": 23,\n \t\t\"name\": \"some_another_name\"\t\n \t}\n  }\n ]"
+				},
+				"url": {
+					"raw": "https://localhost:44382/api",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44382",
+					"path": [
+						"api"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
